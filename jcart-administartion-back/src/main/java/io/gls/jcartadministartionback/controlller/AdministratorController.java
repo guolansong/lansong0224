@@ -1,8 +1,6 @@
 package io.gls.jcartadministartionback.controlller;
 
-import io.gls.jcartadministartionback.dto.in.AdministartorLoginInDTO;
-import io.gls.jcartadministartionback.dto.in.AdministartorResetPwdInDTO;
-import io.gls.jcartadministartionback.dto.in.AdministratorUpdateProfileDTO;
+import io.gls.jcartadministartionback.dto.in.*;
 import io.gls.jcartadministartionback.dto.out.AdministartorListOutDTO;
 import io.gls.jcartadministartionback.dto.out.AdministartorShowOutDTO;
 import io.gls.jcartadministartionback.dto.out.AdministratorGetProfileOutDTO;
@@ -41,32 +39,37 @@ public class AdministratorController {
 
     }
 
-    @PostMapping("/getList")
+    @GetMapping("/getList")
     public PageOutDTO<AdministartorListOutDTO> getList(@RequestParam Integer pageNum){
         return null;
     }
 
-    @PostMapping("/getById")
+    @GetMapping("/getById")
     public AdministartorShowOutDTO getById(@RequestParam Integer administratorId){
         return null;
     }
 
-    @PostMapping("/update")
-    public void update(@RequestBody  AdministratorUpdateProfileDTO administratorUpdateProfileDTO){
-
-    }
-
     @PostMapping("/create")
-    public void create(@RequestBody  AdministratorUpdateProfileDTO administratorUpdateProfileDTO){
-
+    public Integer create(@RequestBody AdministratorCreateInDTO administratorCreateInDTO){
+        return  null;
     }
 
 
 
-    @PostMapping("/list")
-    public void  list(@RequestBody  AdministratorUpdateProfileDTO administratorUpdateProfileDTO){
+    @PostMapping("/update")
+    public void  list(@RequestBody AdministratorUpdateInDTO administratorUpdateInDTO){
 
     }
+
+//    @PostMapping("/list")
+//    public void  list(){
+//
+//    }
+//
+//    @PostMapping("/list")
+//    public void  list(){
+//
+//    }
 
 
 }
