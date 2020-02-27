@@ -7,6 +7,8 @@ import io.gls.jcartadministartionback.dto.out.AdministratorGetProfileOutDTO;
 import io.gls.jcartadministartionback.dto.out.PageOutDTO;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/administrator")
 public class AdministratorController {
@@ -61,15 +63,14 @@ public class AdministratorController {
 
     }
 
-//    @PostMapping("/list")
-//    public void  list(){
-//
-//    }
-//
-//    @PostMapping("/list")
-//    public void  list(){
-//
-//    }
+    @PostMapping("/delete")
+    public void delete(@RequestBody Integer adminstratorId){
 
+    }
+
+    @PostMapping("/batchDelete")
+    public void batchDelete(@RequestBody List<Integer> administratorIds){
+
+    }
 
 }
