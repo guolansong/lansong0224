@@ -1,7 +1,9 @@
 package io.gls.jcartadministartionback.dao;
 
 import io.gls.jcartadministartionback.po.Product;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public interface ProductMapper {
     int deleteByPrimaryKey(Integer productId);
 

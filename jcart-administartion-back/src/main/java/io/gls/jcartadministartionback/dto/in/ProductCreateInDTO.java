@@ -12,7 +12,8 @@ public class ProductCreateInDTO {
     private String mainPicUrl;
     private Integer rewordPoints;
     private Integer sortOrder;
-    private Integer description;
+    private String productAbstract;
+    private String description;
     private List<String> otherPicUrls;
 
     public String getProductCode() {
@@ -87,11 +88,11 @@ public class ProductCreateInDTO {
         this.sortOrder = sortOrder;
     }
 
-    public Integer getDescription() {
+    public String getDescription() {
         return description;
     }
 
-    public void setDescription(Integer description) {
+    public void setDescription(String description) {
         this.description = description;
     }
 
@@ -101,5 +102,13 @@ public class ProductCreateInDTO {
 
     public void setOtherPicUrls(List<String> otherPicUrls) {
         this.otherPicUrls = otherPicUrls;
+    }
+
+    public String getProductAbstract() {
+        return productAbstract;
+    }
+
+    public void setProductAbstract(String productAbstract) {
+        this.productAbstract = productAbstract;
     }
 }
