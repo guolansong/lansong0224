@@ -26,6 +26,7 @@ public class ProductServicelmpl implements ProductService {
     @Override
     @Transactional
     public Integer create(ProductCreateInDTO productCreateInDTO) {
+
         Product product =new Product();
         product.setProductCode(productCreateInDTO.getProductCode());
         product.setProductName(productCreateInDTO.getProductName());
@@ -37,7 +38,7 @@ public class ProductServicelmpl implements ProductService {
         product.setRewordPoints(productCreateInDTO.getRewordPoints());
         product.setSortOrder(productCreateInDTO.getSortOrder());
         String description = productCreateInDTO.getDescription();
-        String productAbstract = description.substring(0, Math.max(100, description.length()));
+        String productAbstract = description.substring(0, Math.min(100, description.length()));
         product.setProductAbstract(productAbstract);
         productMapper.insertSelective(product);
 

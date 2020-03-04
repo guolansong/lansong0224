@@ -8,10 +8,7 @@ import io.gls.jcartadministartionback.dto.out.ProductListOUTDTO;
 import io.gls.jcartadministartionback.dto.out.ProductShowOutDTO;
 import io.gls.jcartadministartionback.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/product")
@@ -20,18 +17,18 @@ public class ProductController {
     @Autowired
     private ProductService productService;
 
-    @RequestMapping("/search")
+    @GetMapping("/search")
     public PageOutDTO<ProductListOUTDTO> search(ProductSearchInDTO productSearchInDTO,
-                             @RequestBody Integer pageNum){
+                             @RequestParam Integer pageNum){
         return null;
     }
-    @RequestMapping("/create")
+    @PostMapping("/create")
     public Integer create(@RequestBody ProductCreateInDTO productCreateInDTO){
         Integer productId = productService.create(productCreateInDTO);
         return  productId;
     }
 
-    @RequestMapping("/update")
+    @PostMapping("/update")
     public void update(@RequestBody ProductUpdateInDTO productUpdateInDTO){
 
     }
