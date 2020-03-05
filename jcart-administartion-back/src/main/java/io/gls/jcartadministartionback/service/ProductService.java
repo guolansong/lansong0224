@@ -8,4 +8,6 @@ public interface ProductService {
     Integer create(ProductCreateInDTO productCreateInDTO);
 
     void update(ProductUpdateInDTO productUpdateInDTO);
+
+    void delete(Integer productId);
 }

@@ -35,6 +35,11 @@ public class ProductController {
         productService.update(productUpdateInDTO);
     }
 
+    @PostMapping("/delete")
+    public void delete(@RequestBody Integer productId){
+        productService.delete(productId);
+    }
+
     @GetMapping("/getById")
     public ProductShowOutDTO getById(@RequestBody Integer productId){
         return null;

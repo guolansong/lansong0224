@@ -56,6 +56,7 @@ public class ProductServicelmpl implements ProductService {
     }
 
     @Override
+    @Transactional
     public void update(ProductUpdateInDTO productUpdateInDTO) {
         Product product = new Product();
         product.setProductId(productUpdateInDTO.getProductId());
@@ -78,5 +79,12 @@ public class ProductServicelmpl implements ProductService {
         List<String> otherPicUrls = productUpdateInDTO.getOtherPicUrls();
         productDetail.setOtherPicUrls(JSON.toJSONString(otherPicUrls));
         productDetailMapper.updateByPrimaryKeySelective(productDetail);
+    }
+
+    @Override
+    @Transactional
+    public void delete(Integer productId) {
+        productMapper.deleteByPrimaryKey(productId);
+        productDetailMapper.deleteByPrimaryKey(productId);
     }
 }
