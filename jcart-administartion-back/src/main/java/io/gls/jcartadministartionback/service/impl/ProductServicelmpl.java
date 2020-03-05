@@ -87,4 +87,11 @@ public class ProductServicelmpl implements ProductService {
         productMapper.deleteByPrimaryKey(productId);
         productDetailMapper.deleteByPrimaryKey(productId);
     }
+
+    @Override
+    @Transactional
+    public void batchDelete(List<Integer> productIds) {
+        productMapper.batchDelete(productIds);
+        productDetailMapper.batchDelete(productIds);
+    }
 }

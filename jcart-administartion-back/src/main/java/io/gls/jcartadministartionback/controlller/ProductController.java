@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 @RestController
 @RequestMapping("/product")
@@ -38,6 +39,13 @@ public class ProductController {
     @PostMapping("/delete")
     public void delete(@RequestBody Integer productId){
         productService.delete(productId);
+    }
+
+    @PostMapping("deletes")
+    public void deletes(@RequestBody List<Integer> productIds){
+
+        productService.batchDelete(productIds);
+
     }
 
     @GetMapping("/getById")
