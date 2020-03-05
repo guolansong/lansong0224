@@ -10,6 +10,8 @@ import io.gls.jcartadministartionback.service.ProductService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
+
 @RestController
 @RequestMapping("/product")
 public class ProductController {

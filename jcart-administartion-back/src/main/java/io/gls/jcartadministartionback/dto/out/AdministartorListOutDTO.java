@@ -1,17 +1,17 @@
 package io.gls.jcartadministartionback.dto.out;
 
 public class AdministartorListOutDTO {
-    private Integer administartorId;
+    private Integer administratorId;
     private String username;
     private Byte status;
     private Long createTimestamp;
 
-    public Integer getAdministartorId() {
-        return administartorId;
+    public Integer getAdministratorId() {
+        return administratorId;
     }
 
-    public void setAdministartorId(Integer administartorId) {
-        this.administartorId = administartorId;
+    public void setAdministratorId(Integer administratorId) {
+        this.administratorId = administratorId;
     }
 
     public String getUsername() {

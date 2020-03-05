@@ -5,7 +5,7 @@ public class ReturnHistoryListOutDTO {
     private Long timestamp;
     private Byte returnStatus;
     private String comment;
-    private Boolean customerNotityfied;
+    private Boolean customerNotified;
 
     public Integer getReturnHistoryId() {
         return returnHistoryId;
@@ -39,11 +39,11 @@ public class ReturnHistoryListOutDTO {
         this.comment = comment;
     }
 
-    public Boolean getCustomerNotityfied() {
-        return customerNotityfied;
+    public Boolean getCustomerNotified() {
+        return customerNotified;
     }
 
-    public void setCustomerNotityfied(Boolean customerNotityfied) {
-        this.customerNotityfied = customerNotityfied;
+    public void setCustomerNotified(Boolean customerNotified) {
+        this.customerNotified = customerNotified;
     }
 }

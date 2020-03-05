@@ -1,18 +1,11 @@
 package io.gls.jcartadministartionback.dto.in;
 
 public class OrderSearchInDTO {
-    private Integer oderId;
+    private Long orderId;
     private String customerName;
     private Byte status;
-    private Double tatalPrice;
+    private Double totalPrice;
 
-    public Integer getOderId() {
-        return oderId;
-    }
-
-    public void setOderId(Integer oderId) {
-        this.oderId = oderId;
-    }
 
     public String getCustomerName() {
         return customerName;
@@ -30,11 +23,20 @@ public class OrderSearchInDTO {
         this.status = status;
     }
 
-    public Double getTatalPrice() {
-        return tatalPrice;
+    public Double getTotalPrice() {
+        return totalPrice;
     }
 
-    public void setTatalPrice(Double tatalPrice) {
-        this.tatalPrice = tatalPrice;
+    public void setTotalPrice(Double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+
+    public Long getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(Long orderId) {
+        this.orderId = orderId;
     }
 }
+

@@ -1,15 +1,15 @@
 package io.gls.jcartadministartionback.dto.in;
 
 public class ReturnUpdateActionInDTO {
-    private Integer retunId;
+    private Integer returnId;
     private Byte action;
 
-    public Integer getRetunId() {
-        return retunId;
+    public Integer getReturnId() {
+        return returnId;
     }
 
-    public void setRetunId(Integer retunId) {
-        this.retunId = retunId;
+    public void setReturnId(Integer returnId) {
+        this.returnId = returnId;
     }
 
     public Byte getAction() {

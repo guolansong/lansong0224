@@ -2,10 +2,11 @@ package io.gls.jcartadministartionback.dto.out;
 
 public class ReturnListOutDTO {
     private Integer returnId;
-    private Long orederId;
+    private Long orderId;
     private Integer customerId;
     private String customerName;
     private String productCode;
+    private String productName;
     private Byte status;
     private Long createTimestamp;
     private Long updateTimestamp;
@@ -18,12 +19,12 @@ public class ReturnListOutDTO {
         this.returnId = returnId;
     }
 
-    public Long getOrederId() {
-        return orederId;
+    public Long getOrderId() {
+        return orderId;
     }
 
-    public void setOrederId(Long orederId) {
-        this.orederId = orederId;
+    public void setOrderId(Long orderId) {
+        this.orderId = orderId;
     }
 
     public Integer getCustomerId() {
@@ -48,6 +49,14 @@ public class ReturnListOutDTO {
 
     public void setProductCode(String productCode) {
         this.productCode = productCode;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 
     public Byte getStatus() {

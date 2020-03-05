@@ -36,7 +36,7 @@ public class Product {
     }
 
     public void setProductCode(String productCode) {
-        this.productCode = productCode == null ? null : productCode.trim();
+        this.productCode = productCode;
     }
 
     public String getProductName() {
@@ -44,7 +44,7 @@ public class Product {
     }
 
     public void setProductName(String productName) {
-        this.productName = productName == null ? null : productName.trim();
+        this.productName = productName;
     }
 
     public String getProductAbstract() {
@@ -52,7 +52,7 @@ public class Product {
     }
 
     public void setProductAbstract(String productAbstract) {
-        this.productAbstract = productAbstract == null ? null : productAbstract.trim();
+        this.productAbstract = productAbstract;
     }
 
     public Double getPrice() {
@@ -92,7 +92,7 @@ public class Product {
     }
 
     public void setMainPicUrl(String mainPicUrl) {
-        this.mainPicUrl = mainPicUrl == null ? null : mainPicUrl.trim();
+        this.mainPicUrl = mainPicUrl;
     }
 
     public Integer getRewordPoints() {

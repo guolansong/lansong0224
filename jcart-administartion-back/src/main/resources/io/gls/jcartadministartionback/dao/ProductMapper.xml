@@ -19,7 +19,7 @@
     status, main_pic_url, reword_points, sort_order
   </sql>
   <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select 
+    select
     <include refid="Base_Column_List" />
     from jcart_product
     where product_id = #{productId,jdbcType=INTEGER}
@@ -29,13 +29,13 @@
     where product_id = #{productId,jdbcType=INTEGER}
   </delete>
   <insert id="insert" parameterType="io.gls.jcartadministartionback.po.Product">
-    insert into jcart_product (product_id, product_code, product_name, 
-      product_abstract, price, discount, 
-      stock_quantity, status, main_pic_url, 
+    insert into jcart_product (product_id, product_code, product_name,
+      product_abstract, price, discount,
+      stock_quantity, status, main_pic_url,
       reword_points, sort_order)
-    values (#{productId,jdbcType=INTEGER}, #{productCode,jdbcType=VARCHAR}, #{productName,jdbcType=VARCHAR}, 
-      #{productAbstract,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, #{discount,jdbcType=DOUBLE}, 
-      #{stockQuantity,jdbcType=INTEGER}, #{status,jdbcType=TINYINT}, #{mainPicUrl,jdbcType=VARCHAR}, 
+    values (#{productId,jdbcType=INTEGER}, #{productCode,jdbcType=VARCHAR}, #{productName,jdbcType=VARCHAR},
+      #{productAbstract,jdbcType=VARCHAR}, #{price,jdbcType=DOUBLE}, #{discount,jdbcType=DOUBLE},
+      #{stockQuantity,jdbcType=INTEGER}, #{status,jdbcType=TINYINT}, #{mainPicUrl,jdbcType=VARCHAR},
       #{rewordPoints,jdbcType=INTEGER}, #{sortOrder,jdbcType=INTEGER})
   </insert>
   <insert id="insertSelective" parameterType="io.gls.jcartadministartionback.po.Product" useGeneratedKeys="true" keyProperty="productId">

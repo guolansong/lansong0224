@@ -9,8 +9,9 @@ public class CustomerShowOutDTO {
     private String email;
     private Byte status;
     private Long createTimestamp;
+    private Boolean newsSubscribed;
     private Integer rewordPoints;
-    private Integer defaulutAddressId;
+    private Integer defaultAddressId;
 
     public Integer getCustomerId() {
         return customerId;
@@ -76,6 +77,14 @@ public class CustomerShowOutDTO {
         this.createTimestamp = createTimestamp;
     }
 
+    public Boolean getNewsSubscribed() {
+        return newsSubscribed;
+    }
+
+    public void setNewsSubscribed(Boolean newsSubscribed) {
+        this.newsSubscribed = newsSubscribed;
+    }
+
     public Integer getRewordPoints() {
         return rewordPoints;
     }
@@ -84,11 +93,12 @@ public class CustomerShowOutDTO {
         this.rewordPoints = rewordPoints;
     }
 
-    public Integer getDefaulutAddressId() {
-        return defaulutAddressId;
+    public Integer getDefaultAddressId() {
+        return defaultAddressId;
     }
 
-    public void setDefaulutAddressId(Integer defaulutAddressId) {
-        this.defaulutAddressId = defaulutAddressId;
+    public void setDefaultAddressId(Integer defaultAddressId) {
+        this.defaultAddressId = defaultAddressId;
     }
 }
+
