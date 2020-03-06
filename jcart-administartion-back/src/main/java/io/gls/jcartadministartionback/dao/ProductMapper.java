@@ -1,5 +1,7 @@
 package io.gls.jcartadministartionback.dao;
 
+import com.github.pagehelper.Page;
+import io.gls.jcartadministartionback.dto.out.ProductListOUTDTO;
 import io.gls.jcartadministartionback.po.Product;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Repository;
@@ -24,4 +26,6 @@ public interface ProductMapper {
 //    custom
 
     int batchDelete(@Param("productIds") List<Integer> productIds);
+
+    Page<ProductListOUTDTO> search();
 }

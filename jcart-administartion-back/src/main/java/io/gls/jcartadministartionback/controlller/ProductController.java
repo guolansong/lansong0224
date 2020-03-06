@@ -1,5 +1,6 @@
 package io.gls.jcartadministartionback.controlller;
 
+import com.github.pagehelper.Page;
 import io.gls.jcartadministartionback.dto.in.ProductCreateInDTO;
 import io.gls.jcartadministartionback.dto.in.ProductSearchInDTO;
 import io.gls.jcartadministartionback.dto.in.ProductUpdateInDTO;
@@ -23,7 +24,15 @@ public class ProductController {
     @GetMapping("/search")
     public PageOutDTO<ProductListOUTDTO> search(ProductSearchInDTO productSearchInDTO,
                              @RequestParam Integer pageNum){
-        return null;
+        Page<ProductListOUTDTO> page = productService.search(pageNum);
+
+        PageOutDTO<ProductListOUTDTO> pageOutDTO = new PageOutDTO<>();
+        pageOutDTO.setTotal(page.getTotal());
+        pageOutDTO.setPageSize(page.getPageSize());
+        pageOutDTO.setPageNum(page.getPageNum());
+        pageOutDTO.setList(page);
+
+        return pageOutDTO;
     }
     @PostMapping("/create")
     public Integer create(@RequestBody ProductCreateInDTO productCreateInDTO){
