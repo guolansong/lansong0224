@@ -4,6 +4,7 @@ import com.github.pagehelper.Page;
 import io.gls.jcartadministartionback.dto.in.ProductCreateInDTO;
 import io.gls.jcartadministartionback.dto.in.ProductUpdateInDTO;
 import io.gls.jcartadministartionback.dto.out.ProductListOUTDTO;
+import io.gls.jcartadministartionback.dto.out.ProductShowOutDTO;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -19,4 +20,6 @@ public interface ProductService {
     void batchDelete(List<Integer> productIds);
 
     Page<ProductListOUTDTO> search(Integer pageNum);
+
+    ProductShowOutDTO getById(Integer productId);
 }

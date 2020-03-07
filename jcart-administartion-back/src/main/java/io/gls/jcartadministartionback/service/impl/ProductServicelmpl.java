@@ -8,6 +8,7 @@ import io.gls.jcartadministartionback.dao.ProductMapper;
 import io.gls.jcartadministartionback.dto.in.ProductCreateInDTO;
 import io.gls.jcartadministartionback.dto.in.ProductUpdateInDTO;
 import io.gls.jcartadministartionback.dto.out.ProductListOUTDTO;
+import io.gls.jcartadministartionback.dto.out.ProductShowOutDTO;
 import io.gls.jcartadministartionback.po.Product;
 import io.gls.jcartadministartionback.po.ProductDetail;
 import io.gls.jcartadministartionback.service.ProductService;
@@ -104,4 +105,34 @@ public class ProductServicelmpl implements ProductService {
         Page<ProductListOUTDTO> page = productMapper.search();
         return page;
     }
+
+
+    @Override
+    public ProductShowOutDTO getById(Integer productId) {
+        Product product = productMapper.selectByPrimaryKey(productId);
+        ProductDetail productDetail = productDetailMapper.selectByPrimaryKey(productId);
+
+        ProductShowOutDTO productShowOutDTO = new ProductShowOutDTO();
+        productShowOutDTO.setProductId(productId);
+        productShowOutDTO.setProductCode(product.getProductCode());
+        productShowOutDTO.setProductName(product.getProductName());
+        productShowOutDTO.setPrice(product.getPrice());
+        productShowOutDTO.setDiscount(product.getDiscount());
+        productShowOutDTO.setStatus(product.getStatus());
+        productShowOutDTO.setMainPicUrl(product.getMainPicUrl());
+        productShowOutDTO.setRewordPoints(product.getRewordPoints());
+        productShowOutDTO.setSortOrder(product.getSortOrder());
+        productShowOutDTO.setStockQuantity(product.getStockQuantity());
+
+        productShowOutDTO.setProductAbstract(product.getProductAbstract());
+
+        productShowOutDTO.setDescription(productDetail.getDescription());
+        String otherPicUrlsJson = productDetail.getOtherPicUrls();
+        List<String> otherPicUrls = JSON.parseArray(otherPicUrlsJson, String.class);
+        productShowOutDTO.setOtherPicUrls(otherPicUrls);
+
+        return productShowOutDTO;
+    }
+
+
 }
