@@ -101,7 +101,7 @@ public class ProductServicelmpl implements ProductService {
 
     @Override
     public Page<ProductListOUTDTO> search(Integer pageNum) {
-        PageHelper.startPage(pageNum,5);
+        PageHelper.startPage(pageNum,3);
         Page<ProductListOUTDTO> page = productMapper.search();
         return page;
     }
