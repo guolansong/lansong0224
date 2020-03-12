@@ -11,9 +11,27 @@ var app = new Vue({
         rewordPoints :"",
         sortOrder :"",
         description :"",
-        otherPicUrls :""
+        otherPicUrls :"",
+        statuses:[
+            { value: 0, label: '下架'},
+            { value: 1, label: '上架'},
+            { value: 2, label: '待审核'}
+        ]
     },
     methods:{
+
+        uploadMainImage(){
+            
+        },
+        
+        handleOnMainChange(){
+            console.log('upload main pic click');
+        },
+        
+        handleUpdateClick(){
+            console.log('update click');
+        },
+
         getProductById() {
             axios.get('/product/getById', {
                 params: {

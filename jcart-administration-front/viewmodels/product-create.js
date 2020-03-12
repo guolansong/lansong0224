@@ -117,7 +117,7 @@ var app = new Vue({
                 })
                 .catch(function (error) {
                     console.log(error);
-                    alert('添加');
+                    alert('添加失败');
                 });
         }
     }
