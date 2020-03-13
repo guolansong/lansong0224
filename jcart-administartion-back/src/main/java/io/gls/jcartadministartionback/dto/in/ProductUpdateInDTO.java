@@ -12,6 +12,7 @@ public class ProductUpdateInDTO {
     private String mainPicUrl;
     private Integer rewordPoints;
     private Integer sortOrder;
+    private String productAbst;
     private String description;
     private List<String> otherPicUrls;
 
@@ -101,5 +102,13 @@ public class ProductUpdateInDTO {
 
     public void setOtherPicUrls(List<String> otherPicUrls) {
         this.otherPicUrls = otherPicUrls;
+    }
+
+    public String getProductAbst() {
+        return productAbst;
+    }
+
+    public void setProductAbst(String productAbst) {
+        this.productAbst = productAbst;
     }
 }
